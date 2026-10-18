@@ -1,0 +1,24 @@
+plugins {
+    id "fabric-loom" version "1.4-SNAPSHOT"
+    id "maven-publish"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+}
+
+extra {
+    apply plugin: "fabric-loom"
+    loom {
+        minecraftVersion = project.property("minecraft_version")
+        loaderVersion = project.property("loader_version")
+        modId = "baby-mob-world"
+        version = project.property("mod_version")
+        accessWidener = "src/main/resources/baby-mob-world.accesswidener"
+        mainClass = "com.enderdevelopment.babymobworld.BabyMobWorld"
+    }
+}

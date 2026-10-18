@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "baby-mob-world",
+  "version": "${version}",
+  "name": "Baby Mob World",
+  "description": "A mod that adds baby variants of mobs with custom textures and behaviors.",
+  "authors": ["EnderDevelopment"],
+  "contact": {
+    "homepage": "https://enderdevelopment.com",
+    "sources": "https://github.com/enderdevelopment/baby-mob-world"
+  },
+  "license": "MIT",
+  "icon": "assets/baby-mob-world/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.enderdevelopment.babymobworld.BabyMobWorld"
+    ]
+  },
+  "mixins": [
+    "baby-mob-world.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
